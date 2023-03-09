@@ -33,7 +33,7 @@ ComplexNumber ComplexNumber::operator-(const ComplexNumber &c){
 }
 
 ComplexNumber operator-(double k,const ComplexNumber &c){
-	return ComplexNumber(k-c.real,c.imag);
+	return ComplexNumber(k-c.real,-c.imag);
 }
 
 ComplexNumber ComplexNumber::operator*(const ComplexNumber &c){
@@ -89,8 +89,6 @@ ostream & operator<<(ostream &os,const ComplexNumber &c){
 		}
 	}
 }
-
-
 int main(){
 	ComplexNumber a(1.5,2),b(3.2,-2.5),c(-1,1.2);	
 	cout << a << "\n";
